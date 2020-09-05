@@ -6,14 +6,25 @@
       </div>
       <div class="nav-right">
         <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/tweets-my">My Tweets</router-link>
-        <router-link to="/tweets">World</router-link>
-        <router-link to="/about">About</router-link>
+        <router-link to="/tweets" v-if="user.uid">Tweets</router-link>
+        <router-link to="/signup" v-else>Signup</router-link>
+        <router-link to="/login">User</router-link>
+        <router-link to="/about">?</router-link>
       </div>
     </nav>
     <router-view />
   </div>
 </template>
+
+<script>
+import { mapState } from "vuex";
+
+export default {
+  computed: {
+    ...mapState(["user"]),
+  },
+};
+</script>
 
 <style>
 #app {
@@ -42,5 +53,23 @@ nav a.router-link-exact-active {
 nav {
   padding-left: 2em;
   padding-right: 2em;
+}
+
+.cardycard {
+  margin: 2% 10% 2% 10%;
+  padding: 3% 3% 3% 3%;
+}
+
+.tweetcard {
+  padding: 10px 10px 2px 10px;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-top: 20px;
+  color: grey;
 }
 </style>
