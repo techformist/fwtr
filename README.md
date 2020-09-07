@@ -12,6 +12,8 @@ npm install
 
 ### Change Firebase Reference
 
+Edit `db.js` to supply your firebase app references and API key.
+
 ### Compiles and hot-reloads for development
 
 ```
