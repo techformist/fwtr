@@ -4,11 +4,11 @@ import "firebase/firestore";
 // Get a Firestore instance
 export const db = firebase
   .initializeApp({
-    apiKey: "AIzaSyAdLWHlwVy9mZRCSZ6Gir8gPJdejMB5JA8",
-    authDomain: "fwtr-fwtr.firebaseapp.com",
-    databaseURL: "https://fwtr-fwtr.firebaseio.com",
+    apiKey: "your_api_key",
+    authDomain: "your_domain.firebaseapp.com",
+    databaseURL: "https://your_app.firebaseio.com",
     projectId: "fwtr-fwtr",
-    storageBucket: "fwtr-fwtr.appspot.com",
-    messagingSenderId: "389246158422",
+    storageBucket: "your_app.appspot.com",
+    messagingSenderId: "1234",
   })
   .firestore();
